@@ -271,6 +271,12 @@
 	<delete id="deleteBook" parameterType="String">
 		DELETE FROM BOOK WHERE ORDERNUM=#{orderNum}
 	</delete>
+	<select id="getUserInfo" resultType="MemberDTO"
+		parameterType="MemberDTO">
+		SELECT *
+		FROM MEMBER
+		WHERE ID = #{id}
+	</select>
 	
 
   </mapper>

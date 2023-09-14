@@ -125,6 +125,10 @@ public class MemberService {
 		return memberDAO.deleteBook(orderNum);
 	}
 
+	public MemberDTO getUserInfo(MemberDTO memberDTO) throws Exception{
+		return memberDAO.getUserInfo(memberDTO);
+	}
+
 	
 	
 }

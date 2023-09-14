@@ -94,6 +94,10 @@ public class MemberDAO {
 			 System.out.println("DAO: " + orderNum);
 		    return sqlSession.delete(NAMESPACE + "deleteBook", orderNum);
 		}
+
+		public MemberDTO getUserInfo(MemberDTO memberDTO) throws Exception {
+			return sqlSession.selectOne(NAMESPACE+"getUserInfo", memberDTO);
+		}
 	
 	
 

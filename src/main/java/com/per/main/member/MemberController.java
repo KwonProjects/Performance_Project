@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.github.scribejava.core.model.OAuth2AccessToken;
+import com.per.main.book.PerformanceOrderDTO;
 
 @Controller
 @RequestMapping("/member/*")
@@ -328,4 +329,30 @@ public class MemberController {
 	public void getMemberAgree() throws Exception{
 			
 	}
+	
+		// 예매내역	
+	  @RequestMapping(value="/memberBook", method = RequestMethod.GET)
+	   public ModelAndView memberBook(@RequestParam(value = "id", required = false) String id) throws Exception {
+	      ModelAndView mv = new ModelAndView();
+	      List<PerformanceOrderDTO> myBook = memberService.getMyBookList(id);
+	      mv.addObject("memberBook", myBook);
+	      mv.setViewName("member/memberBook");
+	      return mv;
+	   }
+
+	   // 예매취소하기
+
+	   @RequestMapping(value = "deleteBook", method = RequestMethod.GET)
+	   public String deleteBook(@RequestParam("orderNum") String orderNum, HttpSession session) throws Exception {
+	       System.out.println(orderNum);
+	       int result = memberService.deleteBook(orderNum);
+
+	       // 세션에서 member 정보를 가져와 member.id 값을 사용
+	       MemberDTO member = (MemberDTO) session.getAttribute("member");
+	       if (member != null) {
+	           return "redirect:/member/memberBook?id=" + member.getId();
+	       } else {
+	           return "redirect:/"; // member 정보가 없는 경우 홈페이지로 리다이렉션
+	       }
+	   }
 }

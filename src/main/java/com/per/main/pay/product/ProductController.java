@@ -49,7 +49,7 @@ public class ProductController {
 
 
 	@RequestMapping(value = "/product/giftDetail", method = RequestMethod.GET)
-	public ModelAndView getGiftDetail(ProductDTO productDTO, ModelAndView mv) throws Exception {
+	public ModelAndView getGiftDetail(ProductDTO productDTO, ModelAndView mv, MemberDTO memberDTO, HttpSession session) throws Exception {
 		productDTO = productService.getGiftDetail(productDTO);
 		mv.addObject("giftDetail", productDTO);
 		mv.addObject("member", memberDTO);

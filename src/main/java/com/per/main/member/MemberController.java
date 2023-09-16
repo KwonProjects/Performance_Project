@@ -301,10 +301,10 @@ public class MemberController {
    @RequestMapping(value = "logout", method = RequestMethod.GET)
    public String getLogout(HttpSession session) throws Exception {
        System.out.println("logout access_token ="+session.getAttribute("access_token"));
-
-       	if (session.getAttribute("access_token") != null) {
-       		memberService.logout((String)session.getAttribute("access_token")); }
-
+		/*
+		 * if (session.getAttribute("access_token") != null) {
+		 * memberService.logout((String)session.getAttribute("access_token")); }
+		 */
        	session.invalidate();
    
       return "redirect:../";

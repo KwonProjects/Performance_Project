@@ -29,23 +29,12 @@
         <body>
             <c:import url="../base/header.jsp"></c:import>
             <!------ Include the above in your HEAD tag ---------->
-
+			<br><br><br><br><br><br><br>
             <div class="container wrapper">
                 <div class="row cart-head">
                     <div class="container">
                         <div class="row">
                             <p></p>
-                        </div>
-                        <div class="row">
-                            <div style="display: table; margin: auto;">
-                                <span class="step step_complete"> <a href="#" class="check-bc">Cart</a> <span
-                                        class="step_line step_complete"> </span> <span
-                                        class="step_line backline"> </span> </span>
-                                <span class="step step_complete"> <a href="#" class="check-bc">Checkout</a> <span
-                                        class="step_line "> </span> <span class="step_line step_complete"> </span>
-                                </span>
-                                <span class="step_thankyou check-bc step_complete">Thank you</span>
-                            </div>
                         </div>
                         <div class="row">
                             <p></p>
@@ -64,15 +53,13 @@
                                 <div class="panel-body">
                                     <div class="form-group">
                                         <div class="col-sm-3 col-xs-3">
-                                            <img class="img-responsive"
-                                                src="https://loremflickr.com/240/240" />
                                         </div>
                                         <div class="col-sm-6 col-xs-6">
-                                            <div class="col-xs-12">Product name</div>
-                                            <div class="col-xs-12"><small>Quantity:<span>${gift.p_Counter}</span></small></div>
+                                            <div class="col-xs-12" id ="productName">${gift.p_Name}</div>
+                                            <div class="col-xs-12"><small>수량:<span>${gift.p_Counter}</span></small></div>
                                         </div>
                                         <div class="col-sm-3 col-xs-3 text-right">
-                                            <h6><span>$</span>25.00</h6>
+                                            <h6><span></span> ${gift.p_Price}</h6>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -238,23 +225,21 @@
                             <!--CREDIT CART PAYMENT-->
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <h1>테스트 : ${gift.p_Total}</h1>
                                     <button type="button" class="btn btn-primary btn-submit-fix" id="payBtn"
                                         onclick="iamport()" data-pnum="${gift.p_Num}" data-name="${gift.p_Name}"
                                         data-price="${gift.p_Total}" data-count="${gift.p_Counter}"
                                         data-usernum="${member.member_num}" data-user="${member.name}"
                                         data-email="${member.email}" data-tel="${member.phone}"
-                                        data-addr="${member.address}">Place
-                                        Order</button>
+                                        data-addr="${member.address}">주문하기</button>
                                     <button id="cancelBtn" class="btn btn-primary btn-submit-fix"
-                                        id="cancelBtn">취소하기</button>
+                                        id="cancelBtn">뒤로가기</button>
                                 </div>
                             </div>
                             <!--CREDIT CART PAYMENT END-->
                         </div>
-
                     </form>
                 </div>
+                <br><br><br><br><br><br><br><br>
                 <div class="row cart-footer">
 
                 </div>

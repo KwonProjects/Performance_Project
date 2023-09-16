@@ -27,7 +27,7 @@
                   <thead>
                     <tr>                     
                       <th class="text-center text-secondary opacity-7">아이디</th>
-                      <th class="text-secondary opacity-7">삭제여부</th>
+                      <th class="text-center text-secondary opacity-7">삭제여부</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -36,7 +36,7 @@
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs font-weight-bold"><a href="./adminDetail?member_num=${a.member_num}">${a.id}</a></span>
                       </td>
-                      <td class="align-middle">
+                      <td class="align-middle text-center">
 						<span class="badge badge-sm bg-gradient-success">                        
  							<c:if test="${a.deleteType eq 1}">
 							 활동중
@@ -95,9 +95,7 @@
 			</nav>	 
 
     	<c:import url="../../base/adminFooter.jsp"></c:import>
-	
-	</section>
+	 </section>
 	</main>
-	<c:import url="../../base/adminFooter.jsp"></c:import>
 </body>
 </html>

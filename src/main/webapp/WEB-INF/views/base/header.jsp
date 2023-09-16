@@ -15,7 +15,7 @@
                 	<input type="hidden" id="url" value="${url}">
                     <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo">
-                        <img src="/resources/assets/images/logo.png" alt="">
+                   	    <img src="/resources/img/plogo.png" height="90px" alt="">
                     </a>
                     <!-- ***** Logo End ***** -->
  
@@ -24,11 +24,11 @@
                         <li><a href="/performance/musicalList" id="1">뮤지컬</a></li>
                         <li><a href="/performance/playList" id="2">연극</a></li>
                         <li><a href="/notice/list" id="3">공지사항</a></li>
-                        <li><a href="/product/giftShop" id="4">MDshop</a></li>
+                        <li><a href="/product/giftShop" id="4">MD#</a></li>
 
 						<c:if test="${not empty member}">
-							<li><a href="/member/logout" id="5">Logout</a></li>
-							<li><a href="/member/mypage" id="6">Mypage</a></li>
+							<li><a href="/member/logout" id="7">Logout</a></li>
+							<li><a href="/member/mypage" id="8">Mypage</a></li>
 						</c:if>
 
 						<c:if test="${empty member}">
@@ -57,16 +57,27 @@
   	console.log(realResult);
   	if ("/performance/musicalList" == realResult) {
   		$("#1").addClass("active");
+  	} else if ("/performance/detail" == realResult) {
+  		$("#1").addClass("active");	
   	} else if ("/performance/playList" == realResult) {
   		$("#2").addClass("active");
   	} else if ("/board/list" == realResult) {
   		$("#3").addClass("active");
+  	} else if ("/board/detail" == realResult) {
+  		$("#3").addClass("active");
   	} else if ("/product/giftShop" == realResult) {
   		$("#4").addClass("active");
-  	} else if ("/member/userLogin" == realResult) {
+  	} else if ("/product/giftDetail" == realResult) {
+  		$("#4").addClass("active");
+  	} else if ("/member/login" == realResult) {
   		$("#5").addClass("active");
   	} else if ("/member/join" == realResult) {
   		$("#6").addClass("active");
+  	} else if ("/member/mypage" == realResult) {
+  		$("#8").addClass("active");
+  	} else if ("/member/memberUpdate" == realResult) {
+  		$("#8").addClass("active");
+  	} else if ("/member/memberBook" == realResult) {
+  		$("#8").addClass("active");
   	}
-  	
   </script>

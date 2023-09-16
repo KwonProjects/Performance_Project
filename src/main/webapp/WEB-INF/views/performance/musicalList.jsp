@@ -28,7 +28,7 @@
       
         </form>
       </div>
-
+	<br>
     <div class="container text-center mt-3">
       <div class="row mb-5">
       <c:forEach items="${list}" var="d" begin="0" end="4">
@@ -39,7 +39,7 @@
                   <img src="${d.poster}" style="height: 267px; width: 188px;"> 
                 </div>
                 <div class="mt-3">
-                  <p style="color: white;">${d.genrenm} <${d.prfnm}></p>
+                  <p style="color: white;">${d.genrenm} [${d.prfnm}]</p>
                 </div>
               </div>
             </a>
@@ -55,7 +55,7 @@
                     <img src="${d.poster}" style="height: 267px; width: 188px;"> 
                   </div>
                   <div class="mt-3">
-                    <p style="color: white;">${d.genrenm} <${d.prfnm}></p>
+                    <p style="color: white;">${d.genrenm} [${d.prfnm}]</p>
                   </div>
                 </div>
               </a>
@@ -64,7 +64,7 @@
         </div>
     </div>
  
-
+	<br>
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
         <li class="page-item ${pager.pre?'':'disabled'}">

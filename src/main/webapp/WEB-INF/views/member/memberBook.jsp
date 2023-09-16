@@ -105,16 +105,16 @@
 						<h2>My page</h2>
 					</div>
 
-					<ul class="mypage_menu">
-						<li><a href="./memberUpdate">회원수정</a></li>
-						<li><a href="./memberOrder">주문내역</a></li>
-						<li><a href="./memberBook">예매내역</a></li>
-					</ul>
-
+				<ul class="mypage_menu">			
+					<li><a href="./memberUpdate">회원수정</a></li>			
+					 <!-- <li><a href="./memberBook">예매내역</a></li>	 -->
+					 <li><a href="./memberBook?id=${member.id}">예매내역</a></li>
+					 <li><a href="/faq/list">FAQ</a></li>	  
+			    </ul>
 					<div class="filters-content">
 						<section class="container mt-5">
 
-							<table class="table table-primary table-striped table-hover">
+							<table class="table table-success table-sm" style="--bs-table-bg: black; --bs-table-color: white;">
 								<thead>
 									<th>티켓번호</th>
 									<th>공연명</th>
@@ -135,17 +135,33 @@
 											<td>${order.performanceTime}</td>
 											<td>${order.perSeat}</td>
 											<td>${order.totalPrice}</td>
-											<td><button type="button" class="canBtn"
+											<td><button type="button" class="canBtn btn btn-light btn-sm"
 													data-orderNum="${order.orderNum}">취소하기</button></td>
 										</tr>
 									</c:forEach>
 								</tbody>
 							</table>
-
-							<div align="center">
+							<br>
+							<nav aria-label="Page navigation example">
+						      <ul class="pagination justify-content-center">
+						        <li class="page-item ${pager.pre?'':'disabled'}">
+						          <a class="page-link move" href=# data-num="${pager.startNum-1}" aria-label="Previous" style="background: #27292a;">
+						            <span aria-hidden="true">&laquo;</span>
+						          </a>
+						        </li>
+						        <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+						            <li class="page-item"><a class="page-link move" href=# data-num="${i}" style="background: #27292a; color: #666;">1</a></li>
+						        </c:forEach>
+						        <li class="page-item ${pager.next?'':'disabled'}">
+						          <a class="page-link move" href=# data-num="${pager.lastNum+1}" aria-label="Next" style="background: #27292a;">
+						            <span aria-hidden="true">&raquo;</span>
+						          </a>
+						        </li>
+						      </ul>
+						    </nav>
+						
 						</section>
 					</div>
-
 					<script type="text/javascript" src="../resources/js/memberBook.js"></script>
 			
 					<!-- <script type="text/javascript" src="../../../resources/js/member/memberBook.js"> -->

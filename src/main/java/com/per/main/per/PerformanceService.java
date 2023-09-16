@@ -15,12 +15,8 @@ public class PerformanceService {
 	private PerformanceDAO performanceDAO;
 	private PerformanceApi api = new PerformanceApi();
 	
-	public List<PerformanceDTO> getMainList(Pager pager) throws Exception {
-		pager.makeRowNum();
-		Long total = 10L;
-		pager.makePageNum(total);
-		
-		return performanceDAO.getPlayList(pager);
+	public List<PerformanceDTO> getMainList() throws Exception {
+		return performanceDAO.getMainPlayList();
 	}
 	
 	public List<PerformanceDTO> getPlayList(Pager pager) throws Exception {

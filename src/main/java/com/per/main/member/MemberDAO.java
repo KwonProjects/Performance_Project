@@ -51,7 +51,7 @@ public class MemberDAO {
 		return sqlSession.selectOne(NAMESPACE + "getLogin", memberDTO);
 	}
 	
-	//마이페이지에서 수정
+	//留덉씠�럹�씠吏��뿉�꽌 �닔�젙
 	public int setUpdate(MemberDTO memberDTO)throws Exception{
 		return sqlSession.update(NAMESPACE + "setUpdate", memberDTO);
 	}
@@ -61,42 +61,42 @@ public class MemberDAO {
 	}
 
 	
-	//회원삭제
+	//�쉶�썝�궘�젣
 	public int setDelete(MemberDTO memberDTO) throws Exception {
 		return sqlSession.update(NAMESPACE+"setDelete", memberDTO);
 	}
 	
-	//admin에서 회원수정
+	//admin�뿉�꽌 �쉶�썝�닔�젙
 	public int setMemberUpdate(MemberDTO memberDTO) throws Exception {
 		return sqlSession.update(NAMESPACE + "setMemberUpdate", memberDTO);
 	}
-	//admin회원수정
+	//admin�쉶�썝�닔�젙
 	public int setAdminUpdate(MemberDTO memberDTO)throws Exception{
 		return sqlSession.update(NAMESPACE+"setAdminUpdate", memberDTO);
 	}
 
-	//회원상세
+	//�쉶�썝�긽�꽭
 	public MemberDTO getDetail(MemberDTO memberDTO) throws Exception {
 		return sqlSession.selectOne(NAMESPACE+"getDetail", memberDTO);
 	}
 	
-	//회원등록
+	//�쉶�썝�벑濡�
 	public int setAdminAdd(MemberDTO memberDTO) throws Exception {
 		return sqlSession.insert(NAMESPACE+"setAdminAdd", memberDTO);
 	}
 	
-	//회원예매내역
+	//�쉶�썝�삁留ㅻ궡�뿭
 		public List<PerformanceOrderDTO> getMyBookList(String id) throws Exception {
 		    return sqlSession.selectList(NAMESPACE + "getMyBookList", id);
 		}
-	//회원예매취소
+	//�쉶�썝�삁留ㅼ랬�냼
 		 public int deleteBook(String orderNum) throws Exception {
 			 System.out.println("DAO: " + orderNum);
 		    return sqlSession.delete(NAMESPACE + "deleteBook", orderNum);
 		}
 
 		public MemberDTO getUserInfo(MemberDTO memberDTO) throws Exception {
-			return sqlSession.selectOne(NAMESPACE+"getUserInfo", memberDTO);
+			return sqlSession.selectOne(NAMESPACE+"getUserInfo",memberDTO);
 		}
 	
 	

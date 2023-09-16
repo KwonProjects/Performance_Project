@@ -38,7 +38,6 @@
 	                      <div class="content">
 	                        <ul>	                        
 	                          <li><a href="#" style=" cursor: pointer;" onclick="location.href='./giftDetail?p_Num=${d.p_Num}';">DETAIL</a></li>
-	                          <li><a href="#" style=" cursor: pointer;" onclick="location.href='./giftDetail?p_Num=${d.p_Num}';"><i class="fa fa-gamepad"></i>CART</a></li>
 	                        </ul>
 	                      </div>
 	                    </div> 

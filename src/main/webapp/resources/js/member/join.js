@@ -264,6 +264,14 @@ $("#joinBtn").on("click", function(){
     $("#email").focus();
     return false;
   }
+  
+ // 이메일 본인인증
+  if ($("#mailcheck").val() == "") {
+    alert("[안내] 본인인증번호를 입력해주세요.");
+    $("#email").focus();
+    return false;
+  }
+  
   //휴대폰
   if ($("#phone").val() == "") {
     alert("[안내] 휴대폰 번호를 입력해주세요.");

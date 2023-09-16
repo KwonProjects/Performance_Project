@@ -1,8 +1,7 @@
-html,
-body,
+html,body,
 .wrapper {
-    background: #f7f7f7;
-    font-family: arial;
+    background: #1f2122;
+    font-family: 'Poppins', sans-serif;
 }
 
 .new {

@@ -266,6 +266,7 @@
 	<select id="getMyBookList" parameterType="String"
 		resultType="PerformanceOrderDTO">
 		SELECT * FROM BOOK WHERE ID=#{id}
+		ORDER BY ORDERNUM DESC
 	</select>
 	<!-- 예매취소(삭제) -->
 	<delete id="deleteBook" parameterType="String">

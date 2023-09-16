@@ -144,6 +144,17 @@
 		WHERE R BETWEEN #{startRow} AND #{lastRow} 
 	</select>
 	
+	<select id="getMainPlayList" resultType="PerformanceDTO">
+		SELECT
+			*
+  		FROM
+  			PERFORMANCE
+  		WHERE
+  			GENRENM = '연극'
+  		ORDER BY 
+  			PRFNM
+	</select>
+	
 	<select id="getMusicalTotal" parameterType="Pager" resultType="Long">
 		SELECT COUNT(PERFORMANCE_NUM) FROM PERFORMANCE
 		<include refid="searchPerSql"></include>

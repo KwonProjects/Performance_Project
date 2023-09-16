@@ -17,7 +17,7 @@
 
 
       <div class="input-group my-3">
-        <form action="./musicalList" method="get" id="frm" class="d-flex w-50">
+        <form action="./playList" method="get" id="frm" class="d-flex w-50">
             <input type="hidden" value="1" name="page" id="page">
             <select name="kind" id="k" data-kind="${pager.kind}" class="form-select w-25" aria-label="Default select example" style="background: #27292a; color: #666;">
                 <option class="kind" value="title">Title</option>
@@ -29,7 +29,7 @@
               </div>
         </form>
       </div>
-
+	<br>
     <div class="container text-center mt-3">
       <div class="row mb-5">
       <c:forEach items="${list}" var="d" begin="0" end="4">
@@ -40,7 +40,7 @@
                   <img src="${d.poster}" style="height: 267px; width: 188px;"> 
                 </div>
                 <div class="mt-3">
-                  <p style="color: white;">${d.genrenm} <${d.prfnm}></p>
+                  <p style="color: white;">${d.genrenm} [${d.prfnm}]</p>
                 </div>
               </div>
             </a>
@@ -56,7 +56,7 @@
                     <img src="${d.poster}" style="height: 267px; width: 188px;"> 
                   </div>
                   <div class="mt-3">
-                    <p style="color: white;">${d.genrenm} <${d.prfnm}></p>
+                    <p style="color: white;">${d.genrenm} [${d.prfnm}]</p>
                   </div>
                 </div>
               </a>
@@ -64,7 +64,7 @@
         </c:forEach>
         </div>
     </div>
-
+	<br>
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
         <li class="page-item ${pager.pre?'':'disabled'}">

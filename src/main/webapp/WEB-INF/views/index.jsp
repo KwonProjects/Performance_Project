@@ -99,14 +99,11 @@
                 <div class="owl-features owl-carousel owl-loaded owl-drag">
                   <div class="owl-stage-outer">
                   <div class="owl-stage" style="transform: translate3d(-1243px, 0px, 0px); transition: all 0.25s ease 0s; width: 2985px;">
-	                  <c:forEach items="${perList}" var="p">
+	                  <c:forEach items="${perList}" var="p" begin="0" end="50">
 	                  <div class="owl-item cloned" style="width: 218.667px; margin-right: 30px;">
 		                  <div class="item" style="padding: 30px 15px 60px 15px">
 		                    <div class="thumb">
-		                      <img src="${p.poster}" alt="" height="233px">
-		                      <div class="hover-effect">
-		                        <h6>2.4K Streaming</h6>
-		                      </div>
+		                      <img src="${p.poster}" alt="" height="233px">		                     
 		                    </div>
 		                    <h4>${p.prfnm}</h4>
 		                    <br>
@@ -143,7 +140,7 @@
                 </ul>
               </div>
             </div>
-          </div>
+           </div>
           </div>
           <!-- ***** Most Popular End ***** -->
           
@@ -154,20 +151,18 @@
                 
               </div>              
               <div class="row">
-              <c:forEach items="${openList}" var="o">
+              <c:forEach items="${openList}" var="o" begin="0" end="2">
                 <div class="col-lg-4">
                   <div class="item" style="height:100%;">                
                     <h4>${o.title}</h4>
-                    <p>${o.content}</p>
+                    <p class="haha">${o.content}</p>
                   </div>
                 </div>
                </c:forEach>                
               </div>
             </div>
           </div>
-          
-          
-          
+
   		 <!-- ***** Banner Start ***** -->
           <div class="main-banner" style="background-image:none;">
             <div class="row">
@@ -178,47 +173,29 @@
           
           
           <!-- ***** Gaming Library Start ***** -->
-          <div class="gaming-library">
-            <div class="col-lg-12">
+          <div class="gaming-library" style="margin-top: 0px;">
+            <div class="col-lg-12" style="text-align: center;">
               <div class="heading-section">
-                <h4><em>Your Gaming</em> Library</h4>
+                <h4>MD#</h4>
               </div>
-              <div class="item" >
+              <div class="item" >             
                 <ul>
-                  <li><img src="/resources/assets/images/game-01.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>Dota 2</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>24/08/2036</span></li>
-                  <li><h4>Hours Played</h4><span>634 H 22 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
-              <div class="item">
+                  <li></li>
+                  <li><h4>상품명</h4></li>
+                  <li><h4>가격</h4></li>
+                  <li><h4>수량</h4></li> 
+                  <li><h4>주문하러가기</h4></li>           
+                </ul>  
+              <c:forEach items="${mdList}" var="m" begin="0" end="4">
                 <ul>
-                  <li><img src="/resources/assets/images/game-02.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>Fortnite</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>22/06/2036</span></li>
-                  <li><h4>Hours Played</h4><span>740 H 52 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button"><a href="#">Donwload</a></div></li>
+                  <li><img src="${m.p_Image}" alt="" class="templatemo-item"></li>
+                  <li><h4>${m.p_Name}</h4></li>
+                  <li><h4>${m.p_Price}원</h4></li>
+                  <li><h4>${m.p_Count}</h4></li> 
+                  <li><div class="main-border-button"><a href="/product/giftDetail?p_Num=${m.p_Num}">detail</a></div></li>     
                 </ul>
+               </c:forEach>               
               </div>
-              <div class="item last-item">
-                <ul>
-                  <li><img src="/resources/assets/images/game-03.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>CS-GO</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>21/04/2036</span></li>
-                  <li><h4>Hours Played</h4><span>892 H 14 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="main-button">
-                <a href="profile.html">View Your Library</a>
-              </div>
-            </div>
           </div>
           <!-- ***** Gaming Library End ***** -->
         </div>

@@ -25,8 +25,7 @@
 	                  <thead>
 	                    <tr>
 	                      <th class="text-center text-secondary opacity-7">No</th>
-	                      <th class="text-center text-secondary opacity-7">제목</th>
-	                      <th class="text-center text-secondary opacity-7">내용</th>
+	                      <th class="text-center text-secondary opacity-7">제목</th>	                    
 	                      <th class="text-center text-secondary opacity-7">작성자</th>
 	                      <th class="text-center text-secondary opacity-7">등록일</th>
 	                      <th class="text-center text-secondary opacity-7">조회수</th>
@@ -41,10 +40,7 @@
 	                      </td>
 	                      <td class="align-middle text-center">
 	                        <span class="text-secondary text-xs font-weight-bold"><a href="./detail?num=${d.num}">${d.title}</a></span>
-	                      </td>
-	                      <td class="align-middle text-center">
-	                        <span class="text-secondary text-xs font-weight-bold"><a href="./detail?num=${d.num}">${d.content}</a></span>
-	                      </td>
+	                      </td>	                      
 	                      <td class="align-middle text-center text-sm">
 	                        <span class="text-secondary text-xs font-weight-bold">${d.memberDto.name}</span>
 	                      </td>

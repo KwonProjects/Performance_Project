@@ -64,7 +64,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                 <input type="button" id="mailCheckBtn" value="인증번호 받기">
             </div>
             <div id="emailResult"></div>
-            <input type="text"  class="mail-check-input" placeholder="인증번호 6자리 입력하세요" disabled ="disabled" maxlength="6" >       
+            <input type="text"  class="mail-check-input" id="mailcheck" placeholder="인증번호 6자리 입력하세요" disabled ="disabled" maxlength="6" >       
         <span id="mail-check-warn"></span>
         </div>
         

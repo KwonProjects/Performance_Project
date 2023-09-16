@@ -40,8 +40,7 @@
 		<!-- Latest compiled and minified CSS -->
 			<thead>
 				<th>NO</th>
-				<th>TITLE</th>
-				<th>CONTENT</th>
+				<th>TITLE</th>		
 				<th>WRITER</th>
 				<th>DATE</th>
 				<th>HIT</th>
@@ -50,8 +49,7 @@
 				<c:forEach items="${requestScope.list}" var="d" varStatus="i">
 					<tr>
 						<td>${d.num}</td>
-						<td><a href="./detail?num=${d.num}">${d.title}</a></td>
-						<td><a href="./detail?num=${d.num}">${d.content}</a></td>
+						<td><a href="./detail?num=${d.num}">${d.title}</a></td>						
 						<td>${d.memberDto.name}</td>
 						<td>${d.regDate}</td>
 						<td>${d.hit}</td>
@@ -59,7 +57,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-			
+			<br>
 			<nav aria-label="Page navigation example">
 		      <ul class="pagination justify-content-center">
 		        <li class="page-item ${pager.pre?'':'disabled'}">
@@ -81,7 +79,7 @@
 	
 		
 		<c:if test="${not empty member}">
-		<a class="btn btn-outline-primary" for="btn-check-outlined" href="./add">글쓰기</a>
+		<a class="btn" for="btn-check-outlined" href="./add">글쓰기</a>
 		</c:if>
 	
 	</section>

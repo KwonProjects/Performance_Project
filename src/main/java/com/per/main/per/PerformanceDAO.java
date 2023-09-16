@@ -23,6 +23,10 @@ public class PerformanceDAO {
 		return sqlSession.selectList(NAMESPACE+"getPlayList", pager);
 	}
 	
+	public List<PerformanceDTO> getMainPlayList() throws Exception {
+		return sqlSession.selectList(NAMESPACE+"getMainPlayList");
+	}
+	
 	public Long getMusicalTotal(Pager pager) throws Exception {
 		return sqlSession.selectOne(NAMESPACE+"getMusicalTotal", pager);
 	}

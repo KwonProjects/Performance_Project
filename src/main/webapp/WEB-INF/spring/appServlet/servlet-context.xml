@@ -21,23 +21,14 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<!-- <interceptors>		
+<!-- 	<interceptors>		
 		<interceptor>
-			<mapping path="/member/admin/*"/>
-			<mapping path="member/admin/adminList"/>			
-			<mapping path="member/admin/adminDetail"/>
-			<mapping path="member/admin/adminAdd"/>
-			<mapping path="member/admin/adminDelete"/>
-			<mapping path="member/admin/adminUpdate"/>
-			<mapping path="member/admin/list"/>
-			<mapping path="member/admin/memberDetail"/>
-			<mapping path="member/admin/memberAdd"/>
-			<mapping path="member/admin/memberDelete"/>
-			<mapping path="member/admin/memberUpdate"/>		
+			<mapping path="/admin/*"/>
+			<mapping path="/admin"/>
 			<beans:ref bean="adminInterceptor"/>
 		</interceptor>
-	</interceptors>  -->
-	
+	</interceptors> 
+	 -->
 	
 	<beans:bean id="naverLoginBO" class="com.per.main.member.NaverLoginBO"></beans:bean>
 	<beans:bean id="kakaoLoginBO" class="com.per.main.member.KakaoLoginBO"></beans:bean>

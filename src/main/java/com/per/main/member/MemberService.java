@@ -92,40 +92,40 @@ public class MemberService {
 	    }
 	}
 	
-	//회원,어드민 삭제 (DELETETYPE 업데이트 형식)
+	//�쉶�썝,�뼱�뱶誘� �궘�젣 (DELETETYPE �뾽�뜲�씠�듃 �삎�떇)
 	public int setDelete(MemberDTO memberDTO) throws Exception {
 		return memberDAO.setDelete(memberDTO);
 	}	
 	
 
-	//회원 상세
+	//�쉶�썝 �긽�꽭
 	public MemberDTO getDetail(MemberDTO memberDTO) throws Exception {
 		return memberDAO.getDetail(memberDTO);
 	}
 	
 	
-	//어드민 등록
+	//�뼱�뱶誘� �벑濡�
 	public int setAdminAdd(MemberDTO memberDTO) throws Exception {
 		return memberDAO.setAdminAdd(memberDTO);
 	}
 	
-	//어드민 수정
+	//�뼱�뱶誘� �닔�젙
 	public int setAdminUpdate(MemberDTO memberDTO)throws Exception{
 		return memberDAO.setAdminUpdate(memberDTO);
 	}
 	
-	// 예매내역
+	// �삁留ㅻ궡�뿭
 	public List<PerformanceOrderDTO> getMyBookList(String id) throws Exception {
 		return memberDAO.getMyBookList(id);
 	}
 
-	// 예매취소
+	// �삁留ㅼ랬�냼
 	public int deleteBook(String orderNum) throws Exception {
 		System.out.println("Service: " + orderNum);
 		return memberDAO.deleteBook(orderNum);
 	}
 
-	public MemberDTO getUserInfo(MemberDTO memberDTO) throws Exception{
+	public MemberDTO getUserInfo(MemberDTO memberDTO)throws Exception {
 		return memberDAO.getUserInfo(memberDTO);
 	}
 

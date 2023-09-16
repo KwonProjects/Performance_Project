@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>Insert title here</title>
-<c:import url="../base/base.jsp"></c:import>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>약관동의</title>
 
 <style>
 * {
@@ -82,7 +82,7 @@ ul.join_box {
 
 .footBtwrap>li>button {
 	display: block;
-	width: 100%;
+	width: 100px;
 	height: 100%;
 	font-size: 20px;
 	text-align: center;
@@ -93,14 +93,19 @@ ul.join_box {
 .fpmgBt2 {
 	background-color: #a097ffbc;
 	border:none;
+	border-radius:20px;
 	color: #fff
 }
 /*  li{
  		list-style:none;
  	}  */
 </style>
+
+<c:import url="../base/base.jsp"></c:import>
 </head>
 <body>
+	<section class="container mt-3"
+		style="width: 90%; padding: 70px 0 0 0;">
 	<c:import url="../base/header.jsp"></c:import>
 	<form action="./join" id="joinForm">
 		<br><br>
@@ -150,6 +155,7 @@ ul.join_box {
 	
 		
 	</form>
+	</section>
 	 <script src="/resources/js/member/agree.js"></script>
 </body>
 </html>

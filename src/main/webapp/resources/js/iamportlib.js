@@ -25,7 +25,7 @@ function iamport(p_name, price, email, user, tel, addr, postcode) {
         pay_method: 'card',
         merchant_uid: 'pp' + createOrderNum(),
         name: p_name,
-        amount: 100,
+        amount: price,
         buyer_email: email,
         buyer_name: user,
         buyer_tel: tel,
@@ -62,7 +62,7 @@ function iamport(p_name, price, email, user, tel, addr, postcode) {
                     "member_num": memberNum // 회원번호 
                 },
                 success : function(){
-                    window.location.replace('/pay/done')
+                  location.replace('/pay/buygiftinfo?orderNum='+rsp.merchant_uid);
                 }
             })
         } else {
